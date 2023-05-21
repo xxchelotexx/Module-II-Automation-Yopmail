@@ -1,0 +1,18 @@
+mailTextBox ---> //input[@class='ycptinput']
+newMailButton ---> id=newmail
+destinationMailTextBox ---> //input[@id='msgto']
+subjetTextBox ---> //input[@id='msgsubject']
+messageBodyTextBox ----> //div[@id='msgbody']
+sendMailButton ---> //button[@id='msgsend']
+
+
+refreshButton ----> //button[@id='refresh']
+AssertionMailReceived ----> //div[text()='randomtext']
+
+
+iframeMail ----> //iframe[@id='ifmail']
+iframeInbox ---> //iframe[@id='ifinbox']
+
+driver.Switchto().Frame();
+
+driver.switchTo()DefaultContent();
