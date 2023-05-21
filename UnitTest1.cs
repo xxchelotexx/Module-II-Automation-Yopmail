@@ -5,6 +5,7 @@ namespace Yopmail
     {
         [TestMethod]
         public void TestMethod1()
+
         {
         }
     }
