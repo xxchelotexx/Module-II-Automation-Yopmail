@@ -3,7 +3,8 @@ mailTextBox ---> //input[@class='ycptinput']
 checkInboxButton ---> //button[@class='md']
 
 Inbox Iframe
-newMailButton ---> id=newmail
+newMailButton ---> id=newmail 
+refreshButton ----> //button[@id='refresh']
 
 Mail Iframe
 destinationMailTextBox ---> //input[@id='msgto']
@@ -12,7 +13,7 @@ messageBodyTextBox ----> //div[@id='msgbody']
 sendMailButton ---> //button[@id='msgsend']
 
 
-refreshButton ----> //button[@id='refresh']
+
 AssertionMailReceived ----> //div[text()='randomtext']
 
 
