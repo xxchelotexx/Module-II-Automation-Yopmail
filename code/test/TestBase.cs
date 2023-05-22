@@ -11,11 +11,11 @@ namespace Module_II_Automation.Todois.code.test
     [TestClass]
     public class TestBase
     {
-        [TestMethod]
+        [TestInitialize]
 
         public void OpenBrowser() 
         {
-            session.Session.Instance().GetBrowser().Navigate().GoToUrl("https://todoist.com");
+            session.Session.Instance().GetBrowser().Navigate().GoToUrl("https://yopmail.com");
             
         }
 

@@ -1,5 +1,11 @@
+Main Page
 mailTextBox ---> //input[@class='ycptinput']
+checkInboxButton ---> //button[@class='md']
+
+Inbox Iframe
 newMailButton ---> id=newmail
+
+Mail Iframe
 destinationMailTextBox ---> //input[@id='msgto']
 subjetTextBox ---> //input[@id='msgsubject']
 messageBodyTextBox ----> //div[@id='msgbody']
