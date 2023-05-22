@@ -22,6 +22,7 @@ namespace Yopmail.code.test
         MailIFrame mailiframe = new MailIFrame();
         ChangeFrame changeframe = new ChangeFrame(); 
         ChangeDefaultFrame changedefaultframe = new ChangeDefaultFrame();
+        LeftPanel leftpnael = new LeftPanel();
 
         
 
@@ -34,8 +35,7 @@ namespace Yopmail.code.test
             
             mainpage.mailTextBox.SetText(randomValue);
             mainpage.checkInboxButton.Click();
-            inboxiframe.newMailButton.Click();
-            //Session.Instance().GetBrowser().SwitchTo().Frame("ifmail");
+            leftpnael.newMailButton.Click();
             changeframe.FrameName("ifmail");
             mailiframe.destinationMailTextBox.SetText(randomValue+"@yopmail.com");
             mailiframe.subjectTextBox.SetText(randomValue);
@@ -44,12 +44,10 @@ namespace Yopmail.code.test
             mailiframe.sendMailButton.Click();
             Thread.Sleep(3000);
 
-            //Session.Instance().GetBrowser().SwitchTo().DefaultContent();
             changedefaultframe.DefaultFrame();
-            inboxiframe.refreshButton.Click();
+            leftpnael.refreshButton.Click();
             Thread.Sleep(5000);
 
-            //Session.Instance().GetBrowser().SwitchTo().Frame("ifinbox");
             changeframe.FrameName("ifinbox");
             Assert.IsTrue(inboxiframe.mailNameDisplayed(randomValue),"ERROR! El Correo no coincide");
 
