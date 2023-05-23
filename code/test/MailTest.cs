@@ -31,27 +31,32 @@ namespace Yopmail.code.test
         public void VerifyThatAMailIsSentSucessfully() 
         {
 
+            //Generate a random mail
             string randomValue = RandomMail.GenerateRandom(6);
-            
             mainpage.mailTextBox.SetText(randomValue);
             mainpage.checkInboxButton.Click();
+            
+            //Generate a new mail message
             leftpnael.newMailButton.Click();
             changeframe.FrameName("ifmail");
             mailiframe.destinationMailTextBox.SetText(randomValue+"@yopmail.com");
             mailiframe.subjectTextBox.SetText(randomValue);
             mailiframe.messageBodyTextBox.SetText(randomValue);
-            Thread.Sleep(3000);
+            Thread.Sleep(1000);
             mailiframe.sendMailButton.Click();
-            Thread.Sleep(3000);
+            Thread.Sleep(1000);
 
+
+            //Refresh the inbox
             changedefaultframe.DefaultFrame();
             leftpnael.refreshButton.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(3000);
 
+            //Verify that the mail is received.
             changeframe.FrameName("ifinbox");
             Assert.IsTrue(inboxiframe.mailNameDisplayed(randomValue),"ERROR! El Correo no coincide");
 
-            Thread.Sleep(2000);
+            Thread.Sleep(1000);
         }
 
     }
