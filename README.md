@@ -1,13 +1,13 @@
 # Yopmail
 
-Foobar is a Python library for dealing with word pluralization.
+Testing for Yopmail WebApp
 
 ## Purpose
 
 The main pursose for this code is to "Verify that a mail is sent" and "Verify that a mail is received" using 
  [yopmail](https://yopmail.com)
 
-## Steps to reproduce
+## Test Case Steps
 
 1.- Open [yopmail](https://yopmail.com).
 
