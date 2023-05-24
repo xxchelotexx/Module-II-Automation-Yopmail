@@ -1,6 +1,6 @@
 # Yopmail
 
-Testing for Yopmail WebApp
+Testing for Yopmail WebApp.
 
 ## Purpose
 
